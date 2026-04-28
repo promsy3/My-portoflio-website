@@ -32,7 +32,7 @@ export default function Skills() {
     {
       title: "Tools & Platforms",
       icon: <Wrench className="text-emerald-400" size={24} />,
-      skills: ["Git", "GitHub", "Vercel", "Linux", "VS Code"]
+      skills: ["Git", "GitHub", "Vercel", "VS Code"]
     }
   ];
 
