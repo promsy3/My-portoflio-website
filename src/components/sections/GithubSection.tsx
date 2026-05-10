@@ -22,10 +22,34 @@ export default function GithubSection() {
   useEffect(() => {
     const fetchRepos = async () => {
       try {
-        const res = await fetch("https://api.github.com/users/promsy3/repos?sort=updated&per_page=6");
+        // Fetch slightly more so we have enough after filtering
+        const res = await fetch("https://api.github.com/users/promsy3/repos?sort=updated&per_page=15");
         if (!res.ok) throw new Error("Failed to fetch");
         const data = await res.json();
-        setRepos(data);
+        
+        // Filter out noisy repositories and inject descriptions where needed
+        const processedRepos = data.filter((repo: Repo) => {
+          // Explicitly hide these repos
+          if (repo.name === 'Promise3' || repo.name === 'Promise-') return false;
+          
+          // Always keep the Job Market Analyzer
+          if (repo.name === 'Nigerian-Job-Market-Analyzer') return true;
+          
+          if (!repo.description) return false;
+          
+          const name = repo.name.toLowerCase();
+          if (name.includes('practice') || name.includes('assignment') || name.includes('group')) return false;
+          
+          return true;
+        }).map((repo: Repo) => {
+          // Inject a description for the Job Market Analyzer since it's missing one on GitHub
+          if (repo.name === 'Nigerian-Job-Market-Analyzer' && !repo.description) {
+             return { ...repo, description: "A comprehensive data analysis pipeline uncovering insights, salary trends, and remote work patterns across the Nigerian tech ecosystem." };
+          }
+          return repo;
+        }).slice(0, 6);
+
+        setRepos(processedRepos);
       } catch (err) {
         console.error(err);
         setError(true);
