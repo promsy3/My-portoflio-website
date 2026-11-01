@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { Mail, MessageSquare } from "lucide-react";
 import { FiLinkedin } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -22,7 +23,7 @@ export default function Contact() {
           </h2>
           
           <p className="text-zinc-400 text-lg mb-10">
-            Whether you have a question, a project idea, or just want to chat about backend systems and data analysis, my inbox is always open.
+            Whether you have a question, a project idea, or just want to chat — my inbox and WhatsApp are always open.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -34,6 +35,16 @@ export default function Contact() {
               Say Hello
             </a>
             
+            <a 
+              href="https://wa.me/2349115877195"
+              target="_blank"
+              rel="noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#25D366] text-white font-semibold rounded-full hover:bg-[#20bd5a] transition-colors"
+            >
+              <FaWhatsapp size={20} />
+              WhatsApp
+            </a>
+
             <a 
               href="https://linkedin.com/in/promise-kamsy-139241315" 
               target="_blank" 
