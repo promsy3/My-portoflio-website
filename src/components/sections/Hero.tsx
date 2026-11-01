@@ -26,11 +26,11 @@ export default function Hero() {
           </div>
           
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1]">
-            I build <span className="text-gradient">scalable backend systems</span> & intelligent data solutions.
+            I build <span className="text-gradient">scalable web & backend systems</span> & intelligent data solutions.
           </h1>
           
           <p className="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto md:mx-0">
-            Hi, I&apos;m Promise Kamsy. A Backend Developer and Data Analyst bridging the gap between robust system architecture and data-driven insights.
+            Hi, I&apos;m Promise Kamsy. A Backend & Web Developer transitioning into Data Engineering — crafting responsive applications, robust APIs, and intelligent data solutions.
           </p>
           
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
