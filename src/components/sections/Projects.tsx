@@ -97,25 +97,27 @@ export default function Projects() {
       )
     },
     {
-      title: "Automated Data Quality Firewall",
-      category: "Data Engineering & Backend",
-      description: "A comprehensive system designed to automatically validate, clean, and monitor incoming data pipelines. It acts as an active firewall—detecting anomalies, enforcing rigorous data quality rules, and proactively preventing corrupted or dirty data from entering internal production databases.",
-      impact: "Significantly improved data reliability and prevented downstream application failures by dynamically intercepting erratic datasets before they propagate.",
-      tech: ["Python", "Pandas", "Node.js", "Data Engineering", "Automation"],
-      github: "https://github.com/promsy3", // Placeholder for actual link
-      demo: "#",
+      title: "RedScroller V1",
+      category: "Full-Stack Web App",
+      description: "A modern legal practice management system built for law firms to streamline case tracking, client management, document handling, and billing. Designed with a professional interface that simplifies the complexity of day-to-day legal workflows into an intuitive digital experience.",
+      impact: "Provides law firms with a centralized, efficient platform to manage their entire practice — from client onboarding to case resolution — reducing administrative overhead significantly.",
+      tech: ["NestJS", "Next.js", "PostgreSQL", "TypeScript", "REST APIs"],
+      github: "https://github.com/promsy3/Red-Scroller-V1",
       mockup: (
         <>
-          <p><span className="text-indigo-400">INFO</span> [Firewall]: Starting pipeline interceptor...</p>
-          <p><span className="text-emerald-400">SUCCESS</span> Connected to datalake cluster</p>
-          <p><span className="text-yellow-400">WARN</span> Detected anomaly in dataset batch_89A</p>
-          <p className="text-zinc-500">{">>"} Executing cleansing ruleset...</p>
-          <p><span className="text-emerald-400">SUCCESS</span> Cleansed 4,204 faulty rows.</p>
-          <p className="text-zinc-500">{">>"} Forwarding payload.</p>
+          <p><span className="text-indigo-400">GET</span> /api/cases?status=active</p>
+          <p className="text-zinc-500">{">>"} Fetching active case records...</p>
+          <p><span className="text-emerald-400">200 OK</span> — 42 cases returned</p>
+          <p className="text-zinc-500 mt-2"># Case summary</p>
+          <p>CLIENT: <span className="text-yellow-400">Adeyemi & Co.</span></p>
+          <p>CASE: <span className="text-blue-400">Contract Dispute #CR-0091</span></p>
+          <p>STATUS: <span className="text-emerald-400">In Progress</span></p>
+          <p className="text-zinc-500 mt-2">{">>"} Next hearing: Nov 14, 2026</p>
         </>
       )
     },
     {
+
       title: "Marprom Stores",
       category: "Full-Stack E-Commerce",
       description: "A full-stack e-commerce web application for premium organic apparel and accessories. Features a dynamic frontend, a Node.js/Express serverless backend, a MongoDB Atlas database, and seamless WhatsApp checkout integration to streamline the ordering process.",
@@ -156,29 +158,33 @@ export default function Projects() {
       )
     },
     {
-      title: "Codveda Internship Tasks",
-      category: "Data Analytics & EDA",
-      description: "Data Analytics projects and technical tasks completed during my internship at Codveda Technologies. The work heavily focused on Exploratory Data Analysis (EDA), extensive data cleaning, and creating insightful visualizations to drive data-informed decisions.",
-      findings: [
-        "🧹 Completed robust data cleaning pipelines to ensure high data integrity.",
-        "📊 Conducted comprehensive Exploratory Data Analysis (EDA) on real-world datasets.",
-        "📈 Built dynamic visual reports to uncover hidden trends and patterns.",
-        "🐍 Leveraged Python ecosystems for end-to-end data processing."
-      ],
-      tech: ["Python", "Jupyter Notebook", "Pandas", "Matplotlib", "Seaborn"],
-      github: "https://github.com/promsy3/Codveda-Internship-Tasks",
+      title: "Stream of Joy",
+      category: "Web Development",
+      description: "A multi-page static web application built for the Streams of Joy Owerri media team. The platform enables the team to seamlessly manage service archives, stream resources, and export weekly bulletins — bringing the church's media operations into a clean, organized digital space.",
+      impact: "Empowered the Streams of Joy Owerri media team with a dedicated hub to archive services, manage streaming resources, and distribute weekly bulletins efficiently to the congregation.",
+      tech: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+      github: "https://github.com/promsy3/streams-of-joy-owerri",
       mockup: (
-        <>
-          <p><span className="text-blue-400">import</span> pandas <span className="text-blue-400">as</span> pd</p>
-          <p><span className="text-blue-400">import</span> seaborn <span className="text-blue-400">as</span> sns</p>
-          <p className="text-zinc-500 mt-2"># Clean missing values</p>
-          <p>df.dropna(inplace=<span className="text-purple-400">True</span>)</p>
-          <p>df[<span className="text-green-400">'Revenue'</span>] = pd.to_numeric(df[<span className="text-green-400">'Revenue'</span>])</p>
-          <p className="text-zinc-500 mt-2"># Generate correlation heatmap</p>
-          <p>correlation_matrix = df.corr()</p>
-          <p>sns.heatmap(correlation_matrix, annot=<span className="text-purple-400">True</span>)</p>
-          <p className="text-zinc-400 mt-2">{">>"} Rendering visualization...</p>
-        </>
+        <div className="w-full h-full flex flex-col justify-center gap-3 p-2">
+          <div className="flex items-center gap-2 mb-2">
+            <div className="w-6 h-6 rounded-full bg-yellow-500/30 border border-yellow-500/50 flex items-center justify-center text-[10px]">✝</div>
+            <span className="text-yellow-400 font-semibold text-xs">Streams of Joy Owerri</span>
+          </div>
+          <div className="space-y-2">
+            <div className="p-2 rounded bg-white/5 border border-white/10">
+              <p className="text-zinc-300 text-[10px] font-medium">📺 Sunday Service Archive</p>
+              <p className="text-zinc-500 text-[9px]">Oct 27, 2026 — 3 media files</p>
+            </div>
+            <div className="p-2 rounded bg-white/5 border border-white/10">
+              <p className="text-zinc-300 text-[10px] font-medium">📋 Weekly Bulletin</p>
+              <p className="text-zinc-500 text-[9px]">Nov 01, 2026 — Ready to export</p>
+            </div>
+            <div className="p-2 rounded bg-indigo-500/10 border border-indigo-500/20">
+              <p className="text-indigo-400 text-[10px] font-medium">🔴 Live Stream</p>
+              <p className="text-zinc-500 text-[9px]">Next: Wednesday 6PM</p>
+            </div>
+          </div>
+        </div>
       )
     }
   ];
