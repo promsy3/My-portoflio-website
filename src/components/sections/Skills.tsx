@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Server, Database, Wrench } from "lucide-react";
+import { Server, Database, Wrench, Globe } from "lucide-react";
 
 export default function Skills() {
   const containerVariants = {
@@ -19,6 +19,11 @@ export default function Skills() {
   };
 
   const skillCategories = [
+    {
+      title: "Web Development",
+      icon: <Globe className="text-sky-400" size={24} />,
+      skills: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Responsive Design"]
+    },
     {
       title: "Backend Development",
       icon: <Server className="text-indigo-400" size={24} />,
@@ -51,7 +56,7 @@ export default function Skills() {
         </div>
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
